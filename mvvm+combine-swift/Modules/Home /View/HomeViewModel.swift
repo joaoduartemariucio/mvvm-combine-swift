@@ -40,6 +40,10 @@ class HomeViewModel {
         state = .updateBackgroudColor(randomColor())
     }
 
+    func setLoading(_ value: Bool) {
+        state = .loading(value)
+    }
+
     private func randomColor() -> UIColor {
         return UIColor(
             red: randomCGFloat(),

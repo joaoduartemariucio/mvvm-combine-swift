@@ -18,6 +18,9 @@
 		C40C44D927ABFDA1006CA711 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C44D827ABFDA1006CA711 /* HomeView.swift */; };
 		C40C44DD27ABFDE7006CA711 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C44DC27ABFDE7006CA711 /* ViewCode.swift */; };
 		C40C44E527AC0DB7006CA711 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C44E427AC0DB6006CA711 /* HomeModel.swift */; };
+		C40C44E827AC127D006CA711 /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = C40C44E727AC127D006CA711 /* NVActivityIndicatorView */; };
+		C40C44EA27AC127D006CA711 /* NVActivityIndicatorViewExtended in Frameworks */ = {isa = PBXBuildFile; productRef = C40C44E927AC127D006CA711 /* NVActivityIndicatorViewExtended */; };
+		C40C44EF27AC60E9006CA711 /* UIControl+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40C44EE27AC60E9006CA711 /* UIControl+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,7 @@
 		C40C44D827ABFDA1006CA711 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C40C44DC27ABFDE7006CA711 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		C40C44E427AC0DB6006CA711 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		C40C44EE27AC60E9006CA711 /* UIControl+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40C44E827AC127D006CA711 /* NVActivityIndicatorView in Frameworks */,
+				C40C44EA27AC127D006CA711 /* NVActivityIndicatorViewExtended in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +148,7 @@
 		C40C44DA27ABFDBF006CA711 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C40C44EB27AC1293006CA711 /* Common */,
 				C40C44DB27ABFDD6006CA711 /* Protocols */,
 			);
 			path = Core;
@@ -181,6 +188,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C40C44EB27AC1293006CA711 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C40C44EE27AC60E9006CA711 /* UIControl+Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,6 +212,10 @@
 			dependencies = (
 			);
 			name = "mvvm+combine-swift";
+			packageProductDependencies = (
+				C40C44E727AC127D006CA711 /* NVActivityIndicatorView */,
+				C40C44E927AC127D006CA711 /* NVActivityIndicatorViewExtended */,
+			);
 			productName = "mvvm+combine-swift";
 			productReference = C40C449F27ABFD3B006CA711 /* mvvm+combine-swift.app */;
 			productType = "com.apple.product-type.application";
@@ -269,6 +288,9 @@
 				Base,
 			);
 			mainGroup = C40C449627ABFD3A006CA711;
+			packageReferences = (
+				C40C44E627AC127D006CA711 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
+			);
 			productRefGroup = C40C44A027ABFD3B006CA711 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -317,6 +339,7 @@
 				C40C44D927ABFDA1006CA711 /* HomeView.swift in Sources */,
 				C40C44D427ABFD82006CA711 /* HomeViewModel.swift in Sources */,
 				C40C44DD27ABFDE7006CA711 /* ViewCode.swift in Sources */,
+				C40C44EF27AC60E9006CA711 /* UIControl+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +673,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C40C44E627AC127D006CA711 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C40C44E727AC127D006CA711 /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C40C44E627AC127D006CA711 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
+		};
+		C40C44E927AC127D006CA711 /* NVActivityIndicatorViewExtended */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C40C44E627AC127D006CA711 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorViewExtended;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C40C449727ABFD3A006CA711 /* Project object */;
 }
